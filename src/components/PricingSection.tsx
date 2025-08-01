@@ -117,7 +117,7 @@ const PricingSection = () => {
                 </ul>
                 
                 <Button 
-                  variant={plan.popular ? "hero" : "cinematic"} 
+                  variant={plan.popular ? "neon" : "tech"} 
                   className="w-full text-lg py-3"
                 >
                   Get Started

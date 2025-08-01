@@ -67,15 +67,17 @@ export default {
 				'gradient-hero': 'var(--gradient-hero)',
 				'gradient-card': 'var(--gradient-card)',
 				'gradient-accent': 'var(--gradient-accent)',
-				'gradient-purple': 'var(--gradient-purple)',
+				'gradient-neon': 'var(--gradient-neon)',
+				'gradient-tech': 'var(--gradient-tech)',
 			},
 			boxShadow: {
 				'dramatic': 'var(--shadow-dramatic)',
 				'glow': 'var(--shadow-glow)',
-				'purple-glow': 'var(--shadow-purple-glow)',
+				'neon-glow': 'var(--shadow-neon-glow)',
+				'tech': 'var(--shadow-tech)',
 			},
 			transitionTimingFunction: {
-				'cinematic': 'var(--transition-cinematic)',
+				'tech': 'var(--transition-tech)',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

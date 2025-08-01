@@ -40,7 +40,7 @@ const HeroSection = () => {
             <Button variant="hero" size="lg" className="text-lg px-8 py-4">
               Create Your Film
             </Button>
-            <Button variant="cinematic" size="lg" className="text-lg px-8 py-4">
+            <Button variant="tech" size="lg" className="text-lg px-8 py-4">
               <Play className="w-5 h-5 mr-2" />
               Watch Demo
             </Button>
