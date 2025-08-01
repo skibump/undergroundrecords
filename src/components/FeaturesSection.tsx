@@ -1,73 +1,82 @@
-import { Card, CardContent } from "@/components/ui/card";
-import { Zap, Heart, Shield, Infinity, Camera, Mic } from "lucide-react";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Brain, Camera, Headset, Video, Zap, Trophy } from "lucide-react";
 
 const FeaturesSection = () => {
   const features = [
     {
-      icon: Zap,
-      title: "100% Realistic AI Avatars",
-      description: "Motion capture technology ensures your digital self moves and behaves exactly like you do in real life.",
-    },
-    {
-      icon: Heart,
-      title: "Emotional Storytelling",
-      description: "Our AI crafts compelling narratives that capture the heart and soul of your unique life journey.",
-    },
-    {
-      icon: Shield,
-      title: "Privacy Protected",
-      description: "Your personal data and memories are securely encrypted and protected throughout the entire process.",
-    },
-    {
-      icon: Infinity,
-      title: "Eternal Legacy",
-      description: "Create a lasting memorial that preserves your essence for future generations to experience.",
+      icon: Brain,
+      title: "HYPER-REALISTIC AI AVATARS",
+      description: "Advanced neural networks create photorealistic avatars that perfectly replicate your appearance, voice patterns, and unique mannerisms with scientific precision."
     },
     {
       icon: Camera,
-      title: "Cinematic Quality",
-      description: "Professional-grade production values ensure your life story looks like a Hollywood film.",
+      title: "QUANTUM MOTION CAPTURE", 
+      description: "Military-grade motion capture technology records every micro-movement, creating 100% authentic digital representations of your physical presence."
     },
     {
-      icon: Mic,
-      title: "Authentic Voice",
-      description: "Advanced voice synthesis technology perfectly recreates your natural speaking patterns and tone.",
+      icon: Headset,
+      title: "VR MEMORY RECREATION",
+      description: "Step back into your most precious moments with immersive VR technology. Relive your wedding, childhood home, or any memory in stunning detail."
     },
+    {
+      icon: Video,
+      title: "AI SCRIPTWRITING ENGINE",
+      description: "Our proprietary AI analyzes your life data and creates compelling, personalized narratives that capture the true essence of your story."
+    },
+    {
+      icon: Zap,
+      title: "NEURAL INTERVIEW PROCESSING",
+      description: "Advanced AI conducts deep interviews with family and friends, extracting emotional context and hidden memories to enrich your story."
+    },
+    {
+      icon: Trophy,
+      title: "CINEMA-GRADE PRODUCTION",
+      description: "Every project meets Hollywood standards with 8K resolution, spatial audio, and professional color grading for an unforgettable experience."
+    }
   ];
 
   return (
-    <section id="features" className="py-24 bg-background relative overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5"></div>
+    <section className="py-32 bg-background relative overflow-hidden">
+      {/* Background Tech Pattern */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute inset-0" style={{
+          backgroundImage: `radial-gradient(circle at 1px 1px, hsl(180 100% 60%) 1px, transparent 0)`,
+          backgroundSize: '50px 50px'
+        }} />
+      </div>
       
       <div className="container mx-auto px-6 relative z-10">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Revolutionary
-            <span className="bg-gradient-purple bg-clip-text text-transparent"> Features</span>
+        <div className="text-center mb-20">
+          <div className="inline-block bg-primary/10 border border-primary/30 px-6 py-2 mb-8 text-sm font-bold tracking-widest text-primary uppercase">
+            NEXT-GEN TECHNOLOGY
+          </div>
+          <h2 className="text-5xl md:text-7xl font-black mb-8 tracking-tight">
+            BEYOND
+            <span className="bg-gradient-accent bg-clip-text text-transparent block">
+              REALITY
+            </span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Experience the future of personal storytelling with our groundbreaking technology 
-            that brings your life to the big screen.
+          <p className="text-xl text-muted-foreground max-w-4xl mx-auto font-light">
+            Breakthrough AI, quantum motion capture, and immersive VR technology create experiences 
+            indistinguishable from reality
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((feature, index) => (
-            <Card key={index} className="group hover:shadow-glow transition-all duration-500 transform hover:-translate-y-1 bg-gradient-card border-border/50">
-              <CardContent className="p-8 text-center">
-                <div className="mb-6 relative">
-                  <div className="w-16 h-16 bg-gradient-accent rounded-2xl mx-auto flex items-center justify-center group-hover:rotate-12 transition-transform duration-300">
-                    <feature.icon className="w-8 h-8 text-primary-foreground" />
-                  </div>
+            <Card key={index} className="bg-gradient-card border border-primary/20 hover:border-primary/60 transition-all duration-500 hover:shadow-neon-glow group hover:scale-105">
+              <CardHeader className="text-center pb-4">
+                <div className="mx-auto w-20 h-20 bg-gradient-tech flex items-center justify-center mb-6 shadow-tech group-hover:shadow-neon-glow transition-all duration-500 group-hover:scale-110">
+                  <feature.icon className="w-10 h-10 text-background" />
                 </div>
-                
-                <h3 className="text-xl font-semibold mb-4 text-foreground group-hover:text-primary transition-colors duration-300">
+                <CardTitle className="text-xl font-black text-foreground tracking-tight uppercase">
                   {feature.title}
-                </h3>
-                <p className="text-muted-foreground leading-relaxed">
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-muted-foreground leading-relaxed font-light">
                   {feature.description}
-                </p>
+                </CardDescription>
               </CardContent>
             </Card>
           ))}

@@ -8,55 +8,61 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Futuristic minimalist theme */
-    --background: 0 0% 2%;
+    /* Ultra-modern dark theme */
+    --background: 0 0% 1%;
     --foreground: 0 0% 98%;
 
-    --card: 0 0% 4%;
+    --card: 0 0% 3%;
     --card-foreground: 0 0% 98%;
 
-    --popover: 0 0% 4%;
+    --popover: 0 0% 3%;
     --popover-foreground: 0 0% 98%;
 
     /* Electric cyan primary */
-    --primary: 180 100% 70%;
-    --primary-foreground: 0 0% 2%;
+    --primary: 180 100% 60%;
+    --primary-foreground: 0 0% 1%;
 
     /* Dark secondary */
-    --secondary: 0 0% 8%;
+    --secondary: 0 0% 6%;
     --secondary-foreground: 0 0% 98%;
 
-    --muted: 0 0% 6%;
-    --muted-foreground: 0 0% 65%;
+    --muted: 0 0% 4%;
+    --muted-foreground: 0 0% 70%;
 
     /* Neon pink accent */
-    --accent: 320 100% 75%;
-    --accent-foreground: 0 0% 2%;
+    --accent: 320 100% 70%;
+    --accent-foreground: 0 0% 1%;
 
-    --destructive: 0 75% 55%;
+    --destructive: 0 80% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 0 0% 12%;
-    --input: 0 0% 8%;
-    --ring: 180 100% 70%;
+    --border: 0 0% 10%;
+    --input: 0 0% 6%;
+    --ring: 180 100% 60%;
 
     --radius: 0rem;
 
-    /* Futuristic gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(0 0% 2%), hsl(0 0% 6%));
-    --gradient-card: linear-gradient(145deg, hsl(0 0% 3%), hsl(0 0% 7%));
-    --gradient-accent: linear-gradient(135deg, hsl(180 100% 70%), hsl(200 100% 65%));
-    --gradient-neon: linear-gradient(135deg, hsl(320 100% 75%), hsl(290 100% 70%));
-    --gradient-tech: linear-gradient(90deg, hsl(180 100% 70%), hsl(320 100% 75%));
+    /* Dynamic gradients */
+    --gradient-hero: radial-gradient(ellipse at 30% 20%, hsl(180 100% 60% / 0.1) 0%, transparent 50%),
+                     radial-gradient(ellipse at 70% 80%, hsl(320 100% 70% / 0.1) 0%, transparent 50%),
+                     linear-gradient(135deg, hsl(0 0% 1%) 0%, hsl(0 0% 3%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 2% / 0.9), hsl(0 0% 6% / 0.9));
+    --gradient-accent: linear-gradient(135deg, hsl(180 100% 60%), hsl(320 100% 70%));
+    --gradient-neon: linear-gradient(135deg, hsl(320 100% 70%), hsl(280 100% 75%));
+    --gradient-tech: linear-gradient(90deg, hsl(180 100% 60%), hsl(320 100% 70%));
+    --gradient-particle: radial-gradient(circle, hsl(180 100% 60% / 0.8) 0%, transparent 70%);
     
-    /* Tech shadows */
-    --shadow-dramatic: 0 25px 50px -12px hsl(0 0% 0% / 0.9);
-    --shadow-glow: 0 0 40px hsl(180 100% 70% / 0.4);
-    --shadow-neon-glow: 0 0 40px hsl(320 100% 75% / 0.4);
-    --shadow-tech: 0 0 20px hsl(180 100% 70% / 0.2), 0 0 40px hsl(320 100% 75% / 0.2);
+    /* Enhanced shadows */
+    --shadow-dramatic: 0 25px 50px -12px hsl(0 0% 0% / 0.95);
+    --shadow-glow: 0 0 50px hsl(180 100% 60% / 0.3), 0 0 100px hsl(180 100% 60% / 0.1);
+    --shadow-neon-glow: 0 0 50px hsl(320 100% 70% / 0.4), 
+                        0 0 100px hsl(320 100% 70% / 0.2),
+                        0 0 150px hsl(320 100% 70% / 0.1);
+    --shadow-tech: 0 0 30px hsl(180 100% 60% / 0.2), 0 0 60px hsl(320 100% 70% / 0.2);
     
-    /* Animation */
-    --transition-tech: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    /* Smooth animations */
+    --transition-tech: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
     --sidebar-background: 0 0% 98%;
 
