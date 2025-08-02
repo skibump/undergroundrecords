@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Film } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Navigation = () => {
   return (
@@ -28,8 +29,8 @@ const Navigation = () => {
             </a>
           </div>
           
-          <Button variant="hero" size="lg">
-            Start Your Story
+          <Button variant="hero" size="lg" asChild>
+            <Link to="/create-film">Start Your Story</Link>
           </Button>
         </div>
       </div>

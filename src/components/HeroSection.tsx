@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Play, Sparkles, Brain, Headset } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   return (
@@ -42,29 +43,33 @@ const HeroSection = () => {
             </span>
           </div>
           
-          <h1 className="text-6xl md:text-8xl font-black mb-8 leading-none tracking-tight">
-            YOUR LIFE
-            <span className="bg-gradient-accent bg-clip-text text-transparent block">
-              IMMORTALIZED
+          <h1 className="text-6xl md:text-8xl font-black mb-8 leading-none tracking-tight animate-dream-shift">
+            TURN YOUR
+            <span className="bg-gradient-reality bg-clip-text text-transparent block animate-reality-pulse">
+              DREAMS INTO REALITY
             </span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-4xl mx-auto leading-relaxed font-light">
-            Create cinematic masterpieces of your life with hyper-realistic AI avatars and motion capture. 
-            Experience your memories in VR or share your legacy through film.
+          <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-4xl mx-auto leading-relaxed font-light animate-hologram-flicker">
+            Transform your memories into hyper-realistic AI experiences. Step into your past with VR technology, 
+            create cinematic films of your life, or build entirely new realities from your imagination.
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-16">
-            <Button variant="hero" size="lg" className="text-lg px-10 py-5 font-bold">
-              CREATE FILM
+            <Button variant="hero" size="lg" className="text-lg px-10 py-5 font-bold shadow-reality animate-reality-pulse" asChild>
+              <Link to="/create-film">CREATE FILM</Link>
             </Button>
-            <Button variant="tech" size="lg" className="text-lg px-10 py-5">
-              <Headset className="w-6 h-6 mr-3" />
-              VR MEMORIES
+            <Button variant="tech" size="lg" className="text-lg px-10 py-5 shadow-hologram animate-hologram-flicker" asChild>
+              <Link to="/vr-memories">
+                <Headset className="w-6 h-6 mr-3" />
+                VR MEMORIES
+              </Link>
             </Button>
-            <Button variant="neon" size="lg" className="text-lg px-10 py-5">
-              <Play className="w-6 h-6 mr-3" />
-              DEMO
+            <Button variant="neon" size="lg" className="text-lg px-10 py-5 shadow-glow animate-dream-shift" asChild>
+              <Link to="/demo">
+                <Play className="w-6 h-6 mr-3" />
+                DEMO
+              </Link>
             </Button>
           </div>
           
@@ -85,11 +90,16 @@ const HeroSection = () => {
         </div>
       </div>
       
-      {/* Enhanced Floating Elements */}
-      <div className="absolute top-20 left-20 w-6 h-6 bg-gradient-particle rounded-full animate-drift opacity-80"></div>
-      <div className="absolute top-1/3 right-20 w-8 h-8 bg-gradient-particle rounded-full animate-float opacity-60 delay-1000"></div>
-      <div className="absolute bottom-32 left-1/4 w-4 h-4 bg-gradient-particle rounded-full animate-pulse-glow opacity-70 delay-500"></div>
+      {/* Enhanced Floating Elements with Reality Effects */}
+      <div className="absolute top-20 left-20 w-6 h-6 bg-gradient-dream rounded-full animate-drift opacity-80 shadow-reality"></div>
+      <div className="absolute top-1/3 right-20 w-8 h-8 bg-gradient-hologram rounded-full animate-float opacity-60 delay-1000 shadow-hologram"></div>
+      <div className="absolute bottom-32 left-1/4 w-4 h-4 bg-gradient-reality rounded-full animate-pulse-glow opacity-70 delay-500"></div>
       <div className="absolute bottom-20 right-1/3 w-5 h-5 bg-gradient-particle rounded-full animate-drift opacity-50 delay-2000"></div>
+      
+      {/* Dream Reality Orbs */}
+      <div className="absolute top-1/2 left-10 w-12 h-12 bg-gradient-dream rounded-full animate-reality-pulse opacity-40 blur-sm"></div>
+      <div className="absolute top-1/4 right-10 w-16 h-16 bg-gradient-hologram rounded-full animate-hologram-flicker opacity-30 blur-md"></div>
+      <div className="absolute bottom-1/3 left-1/2 w-10 h-10 bg-gradient-reality rounded-full animate-dream-shift opacity-50 blur-sm"></div>
     </section>
   );
 };
