@@ -5,11 +5,11 @@ import { Link } from "react-router-dom";
 const Navigation = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
-      <div className="container mx-auto px-6 py-4">
+      <div className="container mx-auto px-4 md:px-6 py-3 md:py-4">
         <div className="flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <Film className="w-8 h-8 text-primary" />
-            <span className="text-2xl font-bold bg-gradient-accent bg-clip-text text-transparent">
+          <div className="flex items-center gap-2 md:gap-3">
+            <Film className="w-6 h-6 md:w-8 md:h-8 text-primary" />
+            <span className="text-lg md:text-2xl font-bold bg-gradient-accent bg-clip-text text-transparent">
               Underground Pictures
             </span>
           </div>
@@ -29,7 +29,7 @@ const Navigation = () => {
             </a>
           </div>
           
-          <Button variant="hero" size="lg" asChild>
+          <Button variant="hero" size="sm" className="md:size-lg text-sm md:text-base px-4 md:px-6" asChild>
             <Link to="/create-film">Start Your Story</Link>
           </Button>
         </div>
